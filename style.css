@@ -1,33 +1,127 @@
+/* Umumiy sozlamalar */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-}
-
-h2 {
-    color: #007bff;
-}
-
-.container {
-    width: 80%;
-    margin: auto;
-    background: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-@media (max-width: 768px) {
-    .container {
-        width: 95%;
-        padding: 10px;
-    }
-    img {
-        width: 120px;
-        height: 120px;
-    }
-}
-h1 {
-    font-size: 36px;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, rgba(33, 150, 243, 1) 0%, rgba(255, 87, 34, 1) 100%); /* Ko'k fon */
+    color: #f0f0f0;
+    line-height: 1.7;
+    height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* Sarlavha va rasm */
+  header {
+    text-align: center;
+    padding: 3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-bottom: 4px solid green;
+    backdrop-filter: blur(8px);
+    position: relative;
+    z-index: 10;
+  }
+  
+  #rasm {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 8px 35px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  #rasm:hover {
+    transform: scale(1.1) rotate(15deg);
+  }
+  
+  h1 {
+    margin-top: 1.5rem;
+    font-size: 3rem;
+    color: green;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-weight: 700;
+  }
+  
+  /* About Me bo'limi */
+  .container {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    margin: 1rem 0;
+    backdrop-filter: blur(10px);
+  }
+  
+  .container h2 {
+    color: green;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  .container p {
+    font-size: 1.2rem;
+    text-align: justify;
+    line-height: 1.8;
+    margin-top: 1rem;
+  }
+  
+  /* Skills bo'limi */
+  ul, ol {
+    list-style: none;
+    padding-left: 1rem;
+    margin-top: 1rem;
+  }
+  
+  li {
+    font-size: 1.1rem;
+    margin-bottom: 0.7rem;
+    transition: color 0.3s ease;
+  }
+  
+  li:hover {
+    color: green;
+  }
+  
+  /* Interaktiv havolalar */
+  a {
+    color: green;
+    text-decoration: none;
     font-weight: bold;
-    color: #333;
-}
+    position: relative;
+    display: inline-block;
+    padding-bottom: 2px;
+    transition: all 0.3s ease;
+  }
+  
+  a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: green;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+  }
+  
+  a:hover::after {
+    transform: scaleX(1);
+  }
+  
+  /* Kichik sarlavhalar */
+  h4 {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-top: 1rem;
+    transition: color 0.3s ease;
+  }
+  
+  h4:hover {
+    color: green;
+    transform: scale(1.1);
+  }
+  
