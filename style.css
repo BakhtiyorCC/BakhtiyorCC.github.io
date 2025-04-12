@@ -1,8 +1,8 @@
-/* Umumiy sozlamalar */
+
 body {
     margin: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(135deg, rgba(33, 150, 243, 1) 0%, rgba(255, 87, 34, 1) 100%); /* Ko'k fon */
+    background: linear-gradient(135deg, rgba(33, 150, 243, 1) 0%, rgb(185, 231, 19) 100%); /* Ko'k fon */
     color: #f0f0f0;
     line-height: 1.7;
     height: 100vh;
