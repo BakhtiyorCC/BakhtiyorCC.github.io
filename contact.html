@@ -6,23 +6,75 @@
     <title>Contact</title>
     <link rel="stylesheet" href="main.css">
     <link rel="icon" type="image/png" href="7896fa48-df81-4a91-8afd-5ba8a4702865.png">
+    <style>
+        .containers {
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+
+        #responseMessage {
+            display: none;
+            text-align: center;
+            color: #155724;
+            background-color: #d4edda;
+            border: 1px solid #c3e6cb;
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 16px;
+            font-weight: bold;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+    </style>
 </head>
 <body>
     <section id="contact">
         <h2>Contact Me</h2>
         <p><b>Contact me if you need a team for projects</b></p>
-        <form action="contactgo.html" method="POST">
+        <form id="contactForm">
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
+            <input type="text" name="name" required>
         
             <label for="surname">Surname:</label>
             <input type="text" id="surname" name="surname" required>
         
             <label for="telegram">Telegram Username:</label>
-            <input type="text" id="telegram" name="telegram" required>
+            <input type="text" name="telegram" required>
         
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
+            <input type="email" name="email" required>
         
             <p><b>What types of programming languages ​​do you know and information about yourself?</b></p>
         
@@ -31,7 +83,20 @@
         
             <button type="submit">Send Info</button>
         </form>
-        
-    
+        <div id="responseMessage" class="container">
+            Thanks for your send! 😊<br><br>
+            Biz sizning xabaringizni muvaffaqiyatli qabul qildik. Tez orada siz bilan bog'lanamiz!
+        </div>
+
+    <script>
+        const form = document.getElementById('contactForm');
+        const response = document.getElementById('responseMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); // sahifa yangilanmasin
+            form.style.display = 'none'; // formani yashirish
+            response.style.display = 'block'; // xabarning ko‘rinishi
+        });
+    </script>
 </body>
 </html>
